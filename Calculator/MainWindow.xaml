@@ -76,6 +76,7 @@
 
 
         <TextBox HorizontalAlignment="Left" Height="84" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="3"/>
+        
         <Button Content="=" FontSize="30" Grid.Column="3"/>
 
     </Grid>
