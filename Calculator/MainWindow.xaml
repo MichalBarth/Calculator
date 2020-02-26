@@ -64,18 +64,19 @@
         <Button Content="8" FontSize="30" Command="{Binding Number}" CommandParameter="8" Grid.Column="1" Grid.Row="1"/>
         <Button Content="9" FontSize="30" Command="{Binding Number}" CommandParameter="9" Grid.Column="2" Grid.Row="1"/>
 
-        <Button Content="0" FontSize="30" Command="{Binding Number}" CommandParameter="7" Grid.Row="3" Margin="0,83,0,0" Grid.RowSpan="2"/>
-        <Button Content="." FontSize="30" Command="{Binding Point}" CommandParameter="8" Grid.Column="1" Grid.Row="4" Margin="0,0,0,-1"/>
-        <Button Content="+/-" FontSize="30" Command="{Binding Sign}" CommandParameter="9" Grid.Column="2" Grid.Row="4" Margin="0,0,0,-1"/>
+        <Button Content="0" FontSize="30" Command="{Binding Number}" CommandParameter="0" Grid.Row="4" Margin="0,0,0,-1"/>
+        <Button Content="." FontSize="30" Command="{Binding Point}" CommandParameter="." Grid.Column="1" Grid.Row="4" Margin="0,0,0,-1"/>
+        <Button Content="+/-" FontSize="30" Command="{Binding Sign}" Grid.Column="2" Grid.Row="4" Margin="0,0,0,-1"/>
 
         <Button Content="+" FontSize="30" Command="{Binding Operation}" CommandParameter="+" Grid.Column="3" Grid.Row="1"/>
         <Button Content="-" FontSize="30" Command="{Binding Operation}" CommandParameter="-" Grid.Column="3" Grid.Row="2"/>
         <Button Content="*" FontSize="30" Command="{Binding Operation}" CommandParameter="*" Grid.Column="3" Grid.Row="3"/>
         <Button Content="/" FontSize="30" Command="{Binding Operation}" CommandParameter="/" Grid.Column="3" Grid.Row="4" Margin="0,0,0,-1"/>
-        <Button Content="Reset" FontSize="30" Command="{Binding Reset}" CommandParameter="+" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource SpecialButton}"/>
+        <Button Content="Reset" FontSize="30" Command="{Binding Reset}" Grid.Column="4" Style="{StaticResource SpecialButton}"/>
 
 
-        <TextBox HorizontalAlignment="Left" Height="84" TextWrapping="Wrap" Text="{Binding Input}" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="3"/>
+        <TextBox HorizontalAlignment="Left" Height="84" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="3"/>
+        <Button Content="=" FontSize="30" Grid.Column="3"/>
 
     </Grid>
 </Window>

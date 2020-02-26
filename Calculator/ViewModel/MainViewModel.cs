@@ -43,8 +43,18 @@ namespace Calculator.ViewModel
                 () =>
                 {
                     Value += ".0";
+                    Point.RaiseCanExecuteChanged();
                 },
                 () => (!Value.Contains("."))
+                );
+            Sign = new RelayCommand(
+                () =>
+                {
+                    if (Value.StartsWith("-"))
+                        Value = Value.Substring(1, Value.Length - 1);
+                    else Value = "-" + Value;
+                },
+                () => true
                 );
         }
 
@@ -56,7 +66,8 @@ namespace Calculator.ViewModel
             }
             set
             {
-                value = _value;
+                _value = value;
+                NotifyPropertyChanged();
             }
         }
 
