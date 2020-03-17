@@ -74,10 +74,13 @@
         <Button Content="/" FontSize="30" Command="{Binding Operation}" CommandParameter="/" Grid.Column="3" Grid.Row="4" Margin="0,0,0,-1"/>
         <Button Content="Reset" FontSize="30" Command="{Binding Reset}" Grid.Column="4" Style="{StaticResource SpecialButton}"/>
 
+        <Button Content="cos(x)" FontSize="30" Command="{Binding Operation}" CommandParameter="cos(x)" Grid.Column="4" Grid.Row="4"/>
+        <Button Content="√x" FontSize="30" Command="{Binding Operation}" CommandParameter="√x" Grid.Column="4" Grid.Row="2"/>
+        <Button Content="sin(x)" FontSize="30" Command="{Binding Operation}" CommandParameter="sin(x)" Grid.Column="4" Grid.Row="3"/>
+        <Button Content="^" FontSize="30" Command="{Binding Operation}" CommandParameter="^" Grid.Column="4" Grid.Row="1"/>
 
-        <TextBox HorizontalAlignment="Left" Height="84" TextWrapping="Wrap" Text="{Binding Value}" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="3"/>
-        
-        <Button Content="=" FontSize="30" Grid.Column="3"/>
 
+        <TextBox Height="87" FontSize="52" TextAlignment="Right" Padding="5" Text="{Binding Value}" VerticalAlignment="Center" Width="460" Grid.ColumnSpan="3" Margin="10,0,10,0"/>
+        <Button Content="=" FontSize="30" Command="{Binding Operation}" CommandParameter="=" Grid.Column="3"/>
     </Grid>
 </Window>
